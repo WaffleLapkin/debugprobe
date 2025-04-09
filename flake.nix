@@ -32,6 +32,7 @@
               pkgs.cmake
               pkgs.gnumake
               pkgs.gcc-arm-embedded-13
+              pkgs.picotool
             ];
           };
         }

@@ -67,6 +67,20 @@ if (DEBUG_ON_PICO)
     endif ()
 endif ()
 
+option (DEBUG_ON_XIAO "Compile firmware for the seeed xiao rp2040 instead of Debug Probe" OFF)
+if (DEBUG_ON_XIAO)
+    target_compile_definitions (debugprobe PRIVATE
+	DEBUG_ON_XIAO=1
+    )
+    if (PICO_BOARD STREQUAL "seeed_xiao_rp2040")
+        set_target_properties(debugprobe PROPERTIES
+            OUTPUT_NAME "debugprobe_on_xiao_rp2040"
+        )
+    else ()
+        message(SEND_ERROR "Unsupported board ${PICO_BOARD}")
+    endif ()
+endif ()
+
 
 target_link_libraries(debugprobe PRIVATE
         pico_multicore
