@@ -1,3 +1,15 @@
+# seeed xiao rp2040
+
+This branch contains a patch which allows you to use seeed xiao rp2040 as a debug probe.
+
+In order to build the firmware for xiao you need to pass `-DDEBUG_ON_XIAO=ON -DPICO_BOARD=seeed_xiao_rp2040` to `cmake` (see below).
+
+Here is the diagram detailing how to connect the xiao-based probe to a pico board:
+
+![diagram featuring xiao rp2040 and raspberry pi pico, with colorful lines drawn between them](./xiao_pico_debugprobe.png)
+
+This is partially based on [this post](https://community.element14.com/products/raspberry-pi/b/blog/posts/seeed-studio-xiao-rp2040-as-picoprobe) and linked repository.
+
 # Debugprobe
 
 Firmware source for the Raspberry Pi Debug Probe SWD/UART accessory. Can also be run on a Raspberry Pi Pico.
