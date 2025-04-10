@@ -142,7 +142,7 @@ char const* string_desc_arr [] =
   "CDC-ACM UART Interface", // 6: Interface descriptor for CDC
 };
 
-#define MAX_STRING_SIZE 31
+#define MAX_STRING_SIZE 63
 static uint16_t _desc_str[MAX_STRING_SIZE + 1];
 
 // Invoked when received GET STRING DESCRIPTOR request
